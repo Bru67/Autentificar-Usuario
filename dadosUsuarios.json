@@ -1,0 +1,8 @@
+
+[
+    {"nome": "Ana", "senha" : "1234"},
+    {"nome": "Jorge", "senha" : "2345"},
+    {"nome": "Camila", "senha" : "3456"},
+    {"nome": "David", "senha" : "4567"},
+    {"nome": "Renato", "senha" : "5678"}
+]
