@@ -1,0 +1,26 @@
+[
+    {"login": "Jorge", 
+    "senha": "1234", 
+    "permissoes": {
+        "read": ["change.txt", "lista_clientes.csv"] ,
+        "write": ["lista_clientes.csv"],
+        "delete": []
+    }},
+
+    {"login": "Alonso", 
+    "senha": "4321", 
+    "permissoes": {
+        "read": ["change.txt", "relatorio_financeiro.pdf"] ,
+        "write": ["relatorio_financeiro.pdf", ""],
+        "delete": ["relatorio_financeiro.pdf"]
+    }},
+
+    {"login": "Marieta", 
+    "senha": "0001", 
+    "permissoes": {
+        "read": ["contrato_confidencial.docx", "change.txt"] ,
+        "write": [],
+        "delete": ["contrato_confidencial.docx"]
+    }}
+]
+
