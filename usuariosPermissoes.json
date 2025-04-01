@@ -48,18 +48,27 @@
         "login": "Bruna",
         "senha": "1234",
         "permissoes": {
-            "read": [],
-            "write": ["atividade.py"],
-            "delete": []
+            "read": [
+            ],
+            "write": [
+                "atividade.py"
+            ],
+            "delete": [
+                "a.txt"
+            ]
         }
     },
     {
         "login": "Magali",
         "senha": "asdf",
         "permissoes": {
-            "read": ["boleto.pdf"],
+            "read": [
+                "boleto.pdf"
+            ],
             "write": [],
-            "delete": ["boleto.pdf"]
+            "delete": [
+                "boleto.pdf"
+            ]
         }
     }
 ]

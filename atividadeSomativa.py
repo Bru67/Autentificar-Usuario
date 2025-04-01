@@ -61,15 +61,24 @@ def menuOpcoes(login, autentificado):
         # Deletar arquivo:
         elif opcoes == "4":
             deletarArquivo = input("Qual arquivo você deseja deletar: ")
-            if any(arquivo["arquivo"] == deletarArquivo for arquivo in arquivos):               
+            arquivoEncontrado = next((arquivo for arquivo in arquivos if arquivo["arquivo"] == deletarArquivo), None)
+
+            if arquivoEncontrado:
                 if deletarArquivo in permissoesDoUsuario["delete"]:
-                    os.remove(deletarArquivo) 
-                    print("\nAcesso permitido!\nArquivo deletado com sucesso!\n")
+                    if os.path.exists(deletarArquivo):  
+                        os.remove(deletarArquivo) 
+                        arquivos.remove(arquivoEncontrado) 
+                        print("\nAcesso permitido!\nArquivo deletado com sucesso!\n")
+
+                        with open("arquivos.json", mode="w") as arquivo:
+                            json.dump(arquivos, arquivo, indent=4)
+
+                    else:
+                        print("\nErro: O arquivo não existe no sistema de arquivos!\n")
                 else:
                     print("\nAcesso negado!\nVocê não possui permissão para deletar este arquivo!\n")
-               
             else:
-                print("Este arquivo não existe!")
+                print("Este arquivo não existe na lista de arquivos!")
 
         # Criar arquivo:
         elif opcoes == "5":
@@ -81,19 +90,21 @@ def menuOpcoes(login, autentificado):
                     json.dump(arquivos, arquivo)
             print(f"\nArquivo {criarArquivo} criado com sucesso!\n")
 
-            for usuario_data in permissoesDoUsuario:
-                if usuario_data[login] == permissoes["login"]:
-                    usuario_data["permissoes"]["read"].append(newArquivo)
-                    usuario_data["permissoes"]["write"].append(newArquivo)
-                    usuario_data["permissoes"]["delete"].append(newArquivo)
+            usuario_atualizado = False 
+            for usuario_data in permissoes:
+                if usuario_data["login"] == login: 
+                    usuario_data["permissoes"]["read"].append(criarArquivo)
+                    usuario_data["permissoes"]["write"].append(criarArquivo)
+                    usuario_data["permissoes"]["delete"].append(criarArquivo)
+                    usuario_atualizado = True
                     break
-                else:
-                    print("Deu errado")
-               
-                with open("usuariosPermissoes.json", mode="w") as arquivo:
-                    json.dump(permissoes, arquivo)
 
-            print(f"Permissões concedidas para {login} no arquivo {criarArquivo}.\n")
+            if usuario_atualizado:
+                with open("usuariosPermissoes.json", mode="w") as arquivo:
+                    json.dump(permissoes, arquivo, indent=4)
+                print(f"Permissões concedidas para {login} no arquivo '{criarArquivo}'.\n")
+            else:
+                print("Erro: Usuário não encontrado nas permissões!")
 
 
 
