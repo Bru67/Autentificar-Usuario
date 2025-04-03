@@ -1,20 +1,30 @@
 [
     {
-        "login": "Jorge",
+        "login": "jorge",
         "senha": "1234",
         "permissoes": {
             "read": [
                 "change.txt",
-                "lista_clientes.csv"
+                "lista_clientes.csv",
+                "teste2",
+                "teste3",
+                "teste4"
             ],
             "write": [
-                "lista_clientes.csv"
+                "lista_clientes.csv",
+                "teste2",
+                "teste3",
+                "teste4"
             ],
-            "delete": []
+            "delete": [
+                "teste2",
+                "teste3",
+                "teste4"
+            ]
         }
     },
     {
-        "login": "Alonso",
+        "login": "alonso",
         "senha": "4321",
         "permissoes": {
             "read": [
@@ -22,8 +32,7 @@
                 "relatorio_financeiro.docx"
             ],
             "write": [
-                "relatorio_financeiro.docx",
-                ""
+                "relatorio_financeiro.docx"
             ],
             "delete": [
                 "relatorio_financeiro.docx"
@@ -31,35 +40,45 @@
         }
     },
     {
-        "login": "Marieta",
+        "login": "marieta",
         "senha": "0001",
         "permissoes": {
             "read": [
                 "contrato_confidencial.pdf",
-                "change.txt"
+                "change.txt",
+                "teste"
             ],
-            "write": [],
+            "write": [
+                "teste"
+            ],
             "delete": [
-                "contrato_confidencial.pdf"
+                "contrato_confidencial.pdf",
+                "teste"
             ]
         }
     },
     {
-        "login": "Bruna",
+        "login": "bruna",
         "senha": "1234",
         "permissoes": {
             "read": [
+                "testando.pdf",
+                "boleto.pdf",
+                "modelo_code.py"
             ],
             "write": [
-                "atividade.py"
+                "atividade.py",
+                "testando.pdf"
             ],
             "delete": [
-                "a.txt"
+                "a.txt",
+                "testando.pdf",
+                "modelo_code.py"
             ]
         }
     },
     {
-        "login": "Magali",
+        "login": "magali",
         "senha": "asdf",
         "permissoes": {
             "read": [
@@ -68,6 +87,84 @@
             "write": [],
             "delete": [
                 "boleto.pdf"
+            ]
+        }
+    },
+    {
+        "login": "admin",
+        "senha": "admin123",
+        "permissoes": {
+            "read": [
+                "change.txt",
+                "lista_clientes.csv",
+                "relatorio_financeiro.docx",
+                "contrato_confidencial.pdf",
+                "atividade.py",
+                "boleto.pdf",
+                "testando.pdf",
+                "modelo_code.py",
+                "abc",
+                "abcd",
+                "abcde",
+                "teste",
+                "teste2",
+                "teste3",
+                "teste4"
+            ],
+            "write": [
+                "change.txt",
+                "lista_clientes.csv",
+                "relatorio_financeiro.docx",
+                "contrato_confidencial.pdf",
+                "atividade.py",
+                "boleto.pdf",
+                "testando.pdf",
+                "modelo_code.py",
+                "abc",
+                "abcd",
+                "abcde",
+                "teste",
+                "teste2",
+                "teste3",
+                "teste4"
+            ],
+            "delete": [
+                "change.txt",
+                "lista_clientes.csv",
+                "relatorio_financeiro.docx",
+                "contrato_confidencial.pdf",
+                "atividade.py",
+                "boleto.pdf",
+                "testando.pdf",
+                "modelo_code.py",
+                "abc",
+                "abcd",
+                "abcde",
+                "teste",
+                "teste2",
+                "teste3",
+                "teste4"
+            ]
+        }
+    },
+    {
+        "login": "cleverson",
+        "senha": "cleverson",
+        "permissoes": {
+            "read": [
+                "abc",
+                "abcd",
+                "abcde"
+            ],
+            "write": [
+                "abc",
+                "abcd",
+                "abcde"
+            ],
+            "delete": [
+                "abc",
+                "abcd",
+                "abcde"
             ]
         }
     }
