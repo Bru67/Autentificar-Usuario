@@ -1,5 +1,7 @@
 import json
 
+# Modelo de Controle de Acesso
+
 # Leitura arquivo de permissões
 with open("matriz_controle_acesso.json", mode="r") as arquivo:
     # Lê o conteúdo do arquivo (arquivo.read()) e deserializa o

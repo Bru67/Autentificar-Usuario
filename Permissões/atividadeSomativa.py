@@ -2,8 +2,6 @@ import getpass
 import json
 import os
 
-# Feito por: BRUNA DA SILVA CARNELOSSI
-#         e: EDMUND SOARES DE SOUZA     
 
 # Acesso do Administrador - Atribuir Permissão
 def atribuirPermissao():

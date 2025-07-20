@@ -1,6 +1,5 @@
 import json
 
-# Feito por: BRUNA DA SILVA CARNELOSSI
 # Sistema de Autenticação de  Usuarios utilizando formato JSON para armazenar dados de usuários
 
 # Abre o arquivo dadosUsuarios.json
